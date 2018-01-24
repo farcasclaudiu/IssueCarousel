@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="IssueCarousel.AboutPage" 
+    xmlns:vm="clr-namespace:IssueCarousel;"
+    xmlns:views="clr-namespace:IssueCarousel.Views;"
+    Title="{Binding Title}">
+	<ContentPage.BindingContext>
+		<vm:AboutViewModel />
+	</ContentPage.BindingContext>
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Hello world!"></Label>
+            <Button Text="Make visible" Clicked="Handle_Clicked"></Button>
+        </StackLayout>
+        <views:CarouselPage1
+            Grid.Row="1" 
+            x:Name="car1"
+            IsVisible="false"
+        ></views:CarouselPage1>
+	</Grid>
+</ContentPage>

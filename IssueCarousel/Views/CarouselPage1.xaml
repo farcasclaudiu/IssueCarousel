@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+    xmlns:views="clr-namespace:IssueCarousel.Views;"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="IssueCarousel.Views.CarouselPage1">
+	<ContentView.Content>
+        <Grid>
+            <controls:CarouselViewControl>
+                <controls:CarouselViewControl.ItemsSource>
+                    <x:Array Type="{x:Type View}">
+                        <views:Page1 />
+                        <views:Page2 />
+                    </x:Array>
+                </controls:CarouselViewControl.ItemsSource>
+            </controls:CarouselViewControl>
+        </Grid>
+	</ContentView.Content>
+</ContentView>
